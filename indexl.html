@@ -1,0 +1,1220 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>湖北高考理科501分工科专业报考指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #64748b;
+            --accent: #dc2626;
+            --background: #fafafa;
+            --surface: #ffffff;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --border: #e5e7eb;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+        
+        .serif {
+            font-family: 'Noto Serif SC', serif;
+        }
+        
+        .toc-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            z-index: 50;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .main-content {
+            margin-left: 280px;
+            min-height: 100vh;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+            min-height: 60vh;
+        }
+        
+        .hero-text {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, rgba(220, 38, 38, 0.05) 100%);
+            padding: 3rem;
+            border-radius: 1rem;
+        }
+        
+        .hero-visual {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .citation {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.125rem 0.375rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 0 0.125rem;
+            transition: all 0.2s;
+        }
+        
+        .citation:hover {
+            background: #b91c1c;
+            transform: translateY(-1px);
+        }
+        
+        .section-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .university-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .university-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+        }
+        
+        .score-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        
+        .type-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+        }
+        
+        .priority-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+        
+        .priority-chong {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+        
+        .priority-wen {
+            background: #fefce8;
+            color: #d97706;
+            border: 1px solid #fed7aa;
+        }
+        
+        .priority-bao {
+            background: #f0fdf4;
+            color: #16a34a;
+            border: 1px solid #bbf7d0;
+        }
+        
+        .mermaid-container {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            overflow: auto;
+            position: relative;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            cursor: grab;
+            transition: transform 0.3s ease;
+            transform-origin: center center;
+        }
+        
+        .mermaid:active {
+            cursor: grabbing;
+        }
+        
+        .mermaid svg {
+            max-width: 90%;
+            max-height: 400px;
+            width: auto;
+            height: auto;
+            background: var(--surface);
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: 1px solid var(--border);
+        }
+        
+        .mermaid-controls {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 0.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border);
+        }
+        
+        .mermaid-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        
+        .mermaid-btn:hover {
+            background: #1e40af;
+            transform: translateY(-1px);
+        }
+        
+        .zoom-level {
+            background: var(--surface);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            min-width: 3rem;
+            text-align: center;
+        }
+        
+        @media (max-width: 1024px) {
+            .toc-fixed {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .toc-fixed.open {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Table of Contents -->
+    <nav class="toc-fixed">
+        <div class="p-6">
+            <h3 class="serif font-bold text-lg text-gray-900 mb-4">目录导航</h3>
+            <ul class="space-y-2 text-sm">
+                <li><a href="#overview" class="block py-2 px-3 text-gray-600 hover:text-blue-900 hover:bg-blue-50 rounded transition-colors">概览与核心信息</a></li>
+                <li><a href="#target-major" class="block py-2 px-3 text-gray-600 hover:text-blue-900 hover:bg-blue-50 rounded transition-colors">目标专业与分数定位</a></li>
+                <li><a href="#university-types" class="block py-2 px-3 text-gray-600 hover:text-blue-900 hover:bg-blue-50 rounded transition-colors">可报考院校类型</a></li>
+                <li><a href="#public-universities" class="block py-2 px-3 text-gray-600 hover:text-blue-900 hover:bg-blue-50 rounded transition-colors">公办二本院校推荐</a></li>
+                <li><a href="#private-universities" class="block py-2 px-3 text-gray-600 hover:text-blue-900 hover:bg-blue-50 rounded transition-colors">民办院校推荐</a></li>
+                <li><a href="#other-targets" class="block py-2 px-3 text-gray-600 hover:text-blue-900 hover:bg-blue-50 rounded transition-colors">其他潜在目标院校</a></li>
+                <li><a href="#application-notes" class="block py-2 px-3 text-gray-600 hover:text-blue-900 hover:bg-blue-50 rounded transition-colors">报考注意事项</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="px-8 py-12 bg-gradient-to-br from-slate-50 to-blue-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <h1 class="serif text-4xl md:text-5xl font-bold text-gray-900 mb-4 leading-tight">
+                            <span class="text-blue-900">湖北高考理科</span><br/>
+                            <span class="text-red-600">501分</span>工科专业<br/>
+                            报考指南
+                        </h1>
+                        <p class="text-lg text-gray-700 mb-6">
+                            基于2025年预估本科线426分（超线75分）的专业选择策略分析
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="score-badge">预估分数：501分</span>
+                            <span class="score-badge">超本科线：75分</span>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <img src="https://kimi-web-img.moonshot.cn/img/placeholder-0620/%E5%9B%BE%E7%89%8723.png" alt="湖北高考志愿填报指南图表，包含大学选择策略和分数线分析" class="w-full h-full object-cover opacity-80" size="medium" aspect="wide" query="高考志愿填报 大学选择 数据分析 信息图表" referrerpolicy="no-referrer" data-modified="1" data-score="10000.00"/>
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900/60 to-red-600/60"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <i class="fas fa-graduation-cap text-6xl mb-4 opacity-90"></i>
+                                <h2 class="serif text-2xl font-bold mb-2">智慧选择</h2>
+                                <p class="text-lg opacity-90">成就未来</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Information Dashboard -->
+        <section id="overview" class="px-8 py-12 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-card">
+                    <h2 class="serif text-3xl font-bold text-gray-900 mb-6">核心信息概览</h2>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                        <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl">
+                            <h3 class="font-semibold text-blue-900 mb-2">目标专业</h3>
+                            <ul class="text-sm text-blue-800 space-y-1">
+                                <li>• 计算机类</li>
+                                <li>• 电子信息类</li>
+                                <li>• 电气工程类</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl">
+                            <h3 class="font-semibold text-green-900 mb-2">分数优势</h3>
+                            <div class="text-2xl font-bold text-green-800">501分</div>
+                            <div class="text-sm text-green-700">超本科线75分</div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-amber-50 to-amber-100 p-6 rounded-xl">
+                            <h3 class="font-semibold text-amber-900 mb-2">报考策略</h3>
+                            <div class="text-sm text-amber-800 space-y-1">
+                                <div>公办二本：谨慎选择</div>
+                                <div>民办院校：重点考虑</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="font-semibold text-gray-900 mb-3 flex items-center">
+                            <i class="fas fa-exclamation-triangle text-amber-500 mr-2"></i>
+                            重要提醒
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            本指南基于<strong>2025年预估本科线426分</strong>进行分析<a href="https://m.wh.bendibao.com/news/188322.shtm" class="citation" target="_blank">743</a><a href="https://www.xhby.net/content/s685bfbd1e4b09b72256f7df8.html" class="citation" target="_blank">744</a>。
+                            实际录取情况将取决于官方发布的<strong>最终本科线和一分一段表</strong><a href="https://gaokao.eol.cn/hu_bei/dongtai/202506/t20250625_2677129.shtml" class="citation" target="_blank">645</a><a href="http://www.hbccks.cn/html/gkgzzt/yfyd/" class="citation" target="_blank">644</a>。
+                            建议考生密切关注官方信息发布。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Target Major Section -->
+        <section id="target-major" class="px-8 py-12 bg-gray-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-card">
+                    <h2 class="serif text-3xl font-bold text-gray-900 mb-8">目标专业与分数定位</h2>
+                    
+                    <div class="grid lg:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">目标专业分析</h3>
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-blue-500 pl-4">
+                                    <h4 class="font-semibold text-gray-900">计算机类专业</h4>
+                                    <p class="text-sm text-gray-600">计算机科学与技术、软件工程、网络工程、信息安全、数据科学与大数据技术、人工智能等</p>
+                                </div>
+                                <div class="border-l-4 border-green-500 pl-4">
+                                    <h4 class="font-semibold text-gray-900">电子信息类专业</h4>
+                                    <p class="text-sm text-gray-600">电子信息工程、通信工程、电子科学与技术、微电子科学与工程、光电信息科学与工程等</p>
+                                </div>
+                                <div class="border-l-4 border-purple-500 pl-4">
+                                    <h4 class="font-semibold text-gray-900">电气工程及其自动化</h4>
+                                    <p class="text-sm text-gray-600">电力系统、电机与电器、电力电子技术、自动控制等领域</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">分数定位分析</h3>
+                            <div class="bg-blue-50 p-6 rounded-xl">
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-blue-900">501</div>
+                                        <div class="text-sm text-blue-600">考生预估分数</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-3xl font-bold text-green-600">426</div>
+                                        <div class="text-sm text-green-600">预估本科线</div>
+                                    </div>
+                                </div>
+                                <div class="text-center bg-white p-4 rounded-lg">
+                                    <div class="text-2xl font-bold text-red-600">+75</div>
+                                    <div class="text-sm text-gray-600">超本科线分数</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4 text-sm text-gray-600 bg-amber-50 p-4 rounded-lg">
+                                <strong>注意：</strong>此分数基于预估本科线，实际录取需参考官方发布的2025年本科批次线和一分一段表<a href="https://gaokao.eol.cn/hu_bei/dongtai/202506/t20250625_2677129.shtml" class="citation" target="_blank">645</a><a href="http://www.hbccks.cn/html/gkgzzt/yfyd/" class="citation" target="_blank">644</a>。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- University Types Section -->
+        <section id="university-types" class="px-8 py-12 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-card">
+                    <h2 class="serif text-3xl font-bold text-gray-900 mb-8">可报考院校类型及策略</h2>
+                    
+                    <div class="grid lg:grid-cols-2 gap-8">
+                        <div class="university-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-xl font-semibold text-gray-900">公办二本院校</h3>
+                                <span class="type-badge bg-amber-500">谨慎选择</span>
+                            </div>
+                            <p class="text-gray-700 mb-4">
+                                对于501分的湖北理科考生，报考<strong>公办二本院校</strong>存在一定机会，但需要谨慎选择和策略性填报。
+                                部分省属公办二本院校的工科专业录取分数线可能在本科线上一定范围内浮动。
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex items-center text-green-600">
+                                    <i class="fas fa-check-circle mr-2"></i>
+                                    办学质量较好，声誉较高
+                                </div>
+                                <div class="flex items-center text-red-600">
+                                    <i class="fas fa-exclamation-circle mr-2"></i>
+                                    竞争激烈，尤其是热门工科专业
+                                </div>
+                                <div class="flex items-center text-blue-600">
+                                    <i class="fas fa-lightbulb mr-2"></i>
+                                    建议服从专业调剂增加录取机会
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="university-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-xl font-semibold text-gray-900">民办院校及独立学院</h3>
+                                <span class="type-badge bg-green-500">重点考虑</span>
+                            </div>
+                            <p class="text-gray-700 mb-4">
+                                <strong>民办院校和独立学院是录取概率较大且选择范围较广</strong>的选项。
+                                这类院校的录取分数线通常低于公办二本院校，为分数在本科线之上但竞争力稍弱的考生提供了机会。
+                            </p>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex items-center text-green-600">
+                                    <i class="fas fa-check-circle mr-2"></i>
+                                    录取概率大，选择范围广
+                                </div>
+                                <div class="flex items-center text-blue-600">
+                                    <i class="fas fa-info-circle mr-2"></i>
+                                    同样开设热门工科专业
+                                </div>
+                                <div class="flex items-center text-amber-600">
+                                    <i class="fas fa-dollar-sign mr-2"></i>
+                                    学费通常高于公办院校
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Public Universities Section -->
+        <section id="public-universities" class="px-8 py-12 bg-gray-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-card">
+                    <h2 class="serif text-3xl font-bold text-gray-900 mb-8">公办二本院校推荐</h2>
+                    <p class="text-gray-600 mb-6">以下院校基于往年录取数据分析，供参考选择</p>
+                    
+                    <div class="space-y-6">
+                        <div class="university-card">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">荆楚理工学院</h3>
+                                    <div class="flex items-center text-sm text-gray-600 mb-2">
+                                        <i class="fas fa-map-marker-alt mr-2"></i>
+                                        湖北省荆门市
+                                    </div>
+                                </div>
+                                <span class="score-badge bg-blue-600">计算机类约496分</span>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">计算机类专业录取数据（2024年）</h4>
+                                    <div class="space-y-1 text-sm">
+                                        <div>计算机类（面向荆门）：最低492分，平均495.8分<a href="https://www.dxsbb.com/news/33211.html" class="citation" target="_blank">443</a></div>
+                                        <div>常规计算机类：最低496分，平均500.4分<a href="https://www.dxsbb.com/news/33211.html" class="citation" target="_blank">443</a></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">录取分析</h4>
+                                    <p class="text-sm text-gray-700">
+                                        501分考生报考该校计算机类专业具有一定录取希望，尤其是&#34;面向荆门&#34;的专业方向录取概率相对更高。
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="priority-tag priority-wen">
+                                <i class="fas fa-balance-scale"></i>
+                                建议作为&#34;稳一稳&#34;志愿
+                            </div>
+                        </div>
+
+                        <div class="university-card">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">湖北理工学院</h3>
+                                    <div class="flex items-center text-sm text-gray-600 mb-2">
+                                        <i class="fas fa-map-marker-alt mr-2"></i>
+                                        湖北省黄石市
+                                    </div>
+                                </div>
+                                <span class="score-badge bg-green-600">电气工程约500分</span>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">电气工程及其自动化</h4>
+                                    <div class="space-y-1 text-sm">
+                                        <div>地方专项：最低496分，平均504.2分<a href="https://www.dxsbb.com/news/33205.html" class="citation" target="_blank">444</a></div>
+                                        <div>多省招生：最低分在500分左右<a href="https://news.qq.com/rain/a/20230430A04UT500" class="citation" target="_blank">385</a></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">院校特色</h4>
+                                    <p class="text-sm text-gray-700">
+                                        以工为主的多科性省属公办本科院校，电气工程及其自动化专业具有一定实力。
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="priority-tag priority-chong">
+                                <i class="fas fa-arrow-up"></i>
+                                建议作为&#34;冲一冲&#34;志愿
+                            </div>
+                        </div>
+
+                        <div class="university-card">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">其他潜在公办院校</h3>
+                                    <div class="text-sm text-gray-600 mb-2">
+                                        需进一步查询核实专业及分数线
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-3 gap-4 text-sm">
+                                <div class="bg-blue-50 p-3 rounded-lg">
+                                    <h4 class="font-semibold text-blue-900">湖北工程学院</h4>
+                                    <p class="text-blue-700">2023年物理类最低494分<a href="https://gaokao.eol.cn/yxdt/202310/t20231030_2530110.shtml" class="citation" target="_blank">702</a></p>
+                                </div>
+                                <div class="bg-green-50 p-3 rounded-lg">
+                                    <h4 class="font-semibold text-green-900">湖北文理学院</h4>
+                                    <p class="text-green-700">2024年某专业组最低501分<a href="http://m.copyedu.com/news/99685.html" class="citation" target="_blank">647</a></p>
+                                </div>
+                                <div class="bg-purple-50 p-3 rounded-lg">
+                                    <h4 class="font-semibold text-purple-900">黄冈师范学院</h4>
+                                    <p class="text-purple-700">开设计算机、电子信息类专业<a href="http://m.555edu.com/news/detail/id/184747.html" class="citation" target="_blank">770</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Private Universities Section -->
+        <section id="private-universities" class="px-8 py-12 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-card">
+                    <h2 class="serif text-3xl font-bold text-gray-900 mb-8">民办院校及独立学院推荐</h2>
+                    <p class="text-gray-600 mb-6">以下院校录取概率较大，选择范围较广</p>
+                    
+                    <div class="space-y-6">
+                        <div class="university-card">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">广东理工学院</h3>
+                                    <div class="flex items-center text-sm text-gray-600 mb-2">
+                                        <i class="fas fa-map-marker-alt mr-2"></i>
+                                        广东省肇庆市 | <span class="text-amber-600">民办</span>
+                                    </div>
+                                </div>
+                                <span class="score-badge bg-purple-600">电气工程501分</span>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">电气工程及其自动化</h4>
+                                    <p class="text-sm text-gray-700">
+                                        根据信息，该专业有501分的录取记录<a href="https://www.dakao100.com/article_75282230085.html" class="citation" target="_blank">45</a>，
+                                        考生的分数达到了该专业往年的录取水平。
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">选择优势</h4>
+                                    <p class="text-sm text-gray-700">
+                                        民办院校录取分数线相对公办院校较低，为分数在该区间的考生提供了更多就读本科及心仪专业的机会。
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="priority-tag priority-wen">
+                                <i class="fas fa-balance-scale"></i>
+                                建议作为&#34;稳一稳&#34;志愿
+                            </div>
+                        </div>
+
+                        <div class="university-card">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">武昌首义学院</h3>
+                                    <div class="flex items-center text-sm text-gray-600 mb-2">
+                                        <i class="fas fa-map-marker-alt mr-2"></i>
+                                        湖北省武汉市 | <span class="text-amber-600">民办</span>
+                                    </div>
+                                </div>
+                                <span class="score-badge bg-blue-600">软件工程501分</span>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">软件工程专业</h4>
+                                    <p class="text-sm text-gray-700">
+                                        该专业有501分的录取记录<a href="https://www.dakao100.com/article_75282230085.html" class="citation" target="_blank">45</a>。
+                                        软件工程是当前信息产业的核心专业之一，就业前景广阔。
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">院校背景</h4>
+                                    <p class="text-sm text-gray-700">
+                                        前身为华中科技大学武昌分校，在民办院校中具有较高的声誉和较强的办学实力。
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="priority-tag priority-wen">
+                                <i class="fas fa-balance-scale"></i>
+                                建议作为&#34;稳一稳&#34;志愿
+                            </div>
+                        </div>
+
+                        <div class="university-card">
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 mb-2">武汉工程大学邮电与信息工程学院</h3>
+                                    <div class="flex items-center text-sm text-gray-600 mb-2">
+                                        <i class="fas fa-map-marker-alt mr-2"></i>
+                                        湖北省武汉市 | <span class="text-blue-600">独立学院</span>
+                                    </div>
+                                </div>
+                                <span class="score-badge bg-green-600">计算机501分</span>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">计算机科学与技术</h4>
+                                    <p class="text-sm text-gray-700">
+                                        该专业有501分的录取记录<a href="https://www.dakao100.com/article_75282230085.html" class="citation" target="_blank">45</a>。
+                                        计算机科学与技术专业是热门工科专业，培养具备计算机系统设计、开发和应用能力的高级专门人才。
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-2">办学优势</h4>
+                                    <p class="text-sm text-gray-700">
+                                        依托武汉工程大学的优势资源办学，具有母体高校的学科背景和部分师资支持。
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="priority-tag priority-bao">
+                                <i class="fas fa-shield-alt"></i>
+                                建议作为&#34;保一保&#34;志愿
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other Targets Section -->
+        <section id="other-targets" class="px-8 py-12 bg-gray-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-card">
+                    <h2 class="serif text-3xl font-bold text-gray-900 mb-8">其他潜在目标院校</h2>
+                    <p class="text-gray-600 mb-6">以下院校需要进一步核实专业设置和录取分数线</p>
+                    
+                    <div class="grid lg:grid-cols-3 gap-6">
+                        <div class="university-card">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">湖北师范大学</h3>
+                            <div class="text-sm text-gray-600 mb-3">省属重点本科 | 师范特色</div>
+                            <p class="text-sm text-gray-700 mb-4">
+                                如果开设计算机科学与技术专业并面向湖北理科招生，501分可能需要作为&#34;冲一冲&#34;志愿<a href="http://m.555edu.com/news/detail/id/184747.html" class="citation" target="_blank">131</a>。
+                            </p>
+                            <div class="priority-tag priority-chong">
+                                <i class="fas fa-arrow-up"></i>
+                                冲一冲
+                            </div>
+                        </div>
+                        
+                        <div class="university-card">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">湖北民族大学</h3>
+                            <div class="text-sm text-gray-600 mb-3">恩施市 | 民族特色</div>
+                            <p class="text-sm text-gray-700 mb-4">
+                                往年理工类投档线460分，远低于501分<a href="http://m.555edu.com/news/detail/id/184747.html" class="citation" target="_blank">131</a>。
+                                如果开设计算机专业，分数优势较大。
+                            </p>
+                            <div class="priority-tag priority-bao">
+                                <i class="fas fa-shield-alt"></i>
+                                保一保
+                            </div>
+                        </div>
+                        
+                        <div class="university-card">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3">三峡大学</h3>
+                            <div class="text-sm text-gray-600 mb-3">湖北省重点 | 水利电力优势</div>
+                            <p class="text-sm text-gray-700 mb-4">
+                                作为具有较高声誉的院校，计算机专业录取分数线可能较高。
+                                501分报考可能存在挑战性。
+                            </p>
+                            <div class="priority-tag priority-chong">
+                                <i class="fas fa-arrow-up"></i>
+                                冲一冲（谨慎）
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-lg">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-search text-amber-600 mr-2"></i>
+                            <h4 class="font-semibold text-amber-900">核实建议</h4>
+                        </div>
+                        <ul class="text-sm text-amber-800 space-y-2">
+                            <li>• 查阅各校最新的招生计划，确认专业设置</li>
+                            <li>• 查询近三年相关专业的录取分数线及位次</li>
+                            <li>• 了解专业的培养方向、师资力量和就业情况</li>
+                            <li>• 考虑学校的地理位置和办学特色是否适合自己</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Notes Section -->
+        <section id="application-notes" class="px-8 py-12 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="section-card">
+                    <h2 class="serif text-3xl font-bold text-gray-900 mb-8">报考注意事项</h2>
+                    
+                    <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                                <i class="fas fa-chart-line text-blue-600 mr-3"></i>
+                                关注官方数据
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="bg-blue-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-blue-900 mb-2">2025年本科线和一分一段表</h4>
+                                    <p class="text-sm text-blue-800">
+                                        密切关注<strong>湖北省教育考试院官方发布</strong>的普通高校招生录取控制分数线和一分一段统计表<a href="https://gaokao.eol.cn/hu_bei/dongtai/202506/t20250625_2677129.shtml" class="citation" target="_blank">645</a><a href="http://www.hbccks.cn/html/gkgzzt/yfyd/" class="citation" target="_blank">644</a>。
+                                        这是志愿填报中比分数更为关键的参考依据。
+                                    </p>
+                                </div>
+                                
+                                <div class="bg-green-50 p-4 rounded-lg">
+                                    <h4 class="font-semibold text-green-900 mb-2">位次分析重要性</h4>
+                                    <p class="text-sm text-green-800">
+                                        通过对比目标院校及专业往年录取的最低分及其对应的位次，可以更科学地评估录取可能性。
+                                        例如：如果某院校计算机专业往年录取位次在80000名左右，而考生位次在75000名，则录取希望较大。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                                <i class="fas fa-balance-scale text-green-600 mr-3"></i>
+                                综合考量因素
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">院校因素</h4>
+                                        <p class="text-sm text-gray-600">综合实力、办学层次、师资力量、学科建设、校园文化等</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">专业因素</h4>
+                                        <p class="text-sm text-gray-600">兴趣匹配、职业规划、课程设置、实践教学、行业发展趋势等</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">城市因素</h4>
+                                        <p class="text-sm text-gray-600">地理位置、经济发展、产业结构、就业机会、生活成本等</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-xl mb-8">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                            <i class="fas fa-layer-group text-red-600 mr-3"></i>
+                            志愿填报梯度策略
+                        </h3>
+                        
+                        <div class="grid md:grid-cols-4 gap-4 mb-6">
+                            <div class="text-center bg-white p-4 rounded-lg border-2 border-red-200">
+                                <div class="text-2xl font-bold text-red-600 mb-2">冲一冲</div>
+                                <div class="text-sm text-gray-600">录取线略高于成绩</div>
+                                <div class="text-xs text-red-600 mt-2">505-510分院校</div>
+                            </div>
+                            
+                            <div class="text-center bg-white p-4 rounded-lg border-2 border-amber-200">
+                                <div class="text-2xl font-bold text-amber-600 mb-2">稳一稳</div>
+                                <div class="text-sm text-gray-600">录取线相当</div>
+                                <div class="text-xs text-amber-600 mt-2">500-505分院校</div>
+                            </div>
+                            
+                            <div class="text-center bg-white p-4 rounded-lg border-2 border-green-200">
+                                <div class="text-2xl font-bold text-green-600 mb-2">保一保</div>
+                                <div class="text-sm text-gray-600">录取线略低</div>
+                                <div class="text-xs text-green-600 mt-2">490-500分院校</div>
+                            </div>
+                            
+                            <div class="text-center bg-white p-4 rounded-lg border-2 border-blue-200">
+                                <div class="text-2xl font-bold text-blue-600 mb-2">垫一垫</div>
+                                <div class="text-sm text-gray-600">明显低于成绩</div>
+                                <div class="text-xs text-blue-600 mt-2">480-490分院校</div>
+                            </div>
+                        </div>
+                        
+                        <p class="text-sm text-gray-700">
+                            遵循&#34;冲一冲、稳一稳、保一保、垫一垫&#34;的原则<a href="https://www.gaokao.cn/gk-mb/201/0-0-500" class="citation" target="_blank">127</a>，
+                            每个批次的志愿都要形成合理梯度，避免全部填报同一层次院校。<strong>保底志愿不可或缺</strong>，是考生升学的重要保障。
+                        </p>
+                    </div>
+
+                    <!-- Application Process Flowchart -->
+                    <div class="mermaid-container">
+                        <div class="mermaid-controls">
+                            <button class="mermaid-btn" onclick="zoomMermaid(0.8)" title="缩小">
+                                <i class="fas fa-search-minus"></i>
+                            </button>
+                            <div class="zoom-level" id="zoom-level">100%</div>
+                            <button class="mermaid-btn" onclick="zoomMermaid(1.25)" title="放大">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="mermaid-btn" onclick="resetMermaid()" title="重置">
+                                <i class="fas fa-undo"></i>
+                            </button>
+                        </div>
+                        <div class="mermaid" id="application-flowchart">
+                            flowchart TD
+                                A[获取高考成绩] --&gt; B[关注官方本科线发布]
+                                B --&gt; C[查询一分一段表]
+                                C --&gt; D[确定全省位次]
+                                D --&gt; E[收集院校信息]
+                                E --&gt; F[筛选目标院校]
+                                F --&gt; G[设置志愿梯度]
+                                G --&gt; H[冲一冲院校]
+                                G --&gt; I[稳一稳院校]
+                                G --&gt; J[保一保院校]
+                                G --&gt; K[垫一垫院校]
+                                H --&gt; L[确认志愿顺序]
+                                I --&gt; L
+                                J --&gt; L
+                                K --&gt; L
+                                L --&gt; M[提交志愿表]
+                                
+                                style A fill:#e1f5fe,stroke:#1e3a8a,stroke-width:2px,color:#1f2937
+                                style B fill:#f3e5f5,stroke:#1e3a8a,stroke-width:2px,color:#1f2937
+                                style C fill:#e8f5e8,stroke:#1e3a8a,stroke-width:2px,color:#1f2937
+                                style D fill:#fff3e0,stroke:#1e3a8a,stroke-width:2px,color:#1f2937
+                                style E fill:#fce4ec,stroke:#1e3a8a,stroke-width:2px,color:#1f2937
+                                style F fill:#e0f2f1,stroke:#1e3a8a,stroke-width:2px,color:#1f2937
+                                style G fill:#f1f8e9,stroke:#1e3a8a,stroke-width:2px,color:#1f2937
+                                style H fill:#ffebee,stroke:#dc2626,stroke-width:2px,color:#1f2937
+                                style I fill:#fff8e1,stroke:#d97706,stroke-width:2px,color:#1f2937
+                                style J fill:#e8f5e8,stroke:#16a34a,stroke-width:2px,color:#1f2937
+                                style K fill:#e3f2fd,stroke:#2563eb,stroke-width:2px,color:#1f2937
+                                style L fill:#f3e5f5,stroke:#7c3aed,stroke-width:2px,color:#1f2937
+                                style M fill:#e8f5e8,stroke:#059669,stroke-width:3px,color:#1f2937
+                        </div>
+                    </div>
+                    
+                    <!-- Strategic Decision Matrix -->
+                    <div class="mermaid-container">
+                        <div class="mermaid-controls">
+                            <button class="mermaid-btn" onclick="zoomMermaid(0.8, &#39;decision-matrix&#39;)" title="缩小">
+                                <i class="fas fa-search-minus"></i>
+                            </button>
+                            <div class="zoom-level" id="zoom-level-matrix">100%</div>
+                            <button class="mermaid-btn" onclick="zoomMermaid(1.25, &#39;decision-matrix&#39;)" title="放大">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="mermaid-btn" onclick="resetMermaid(&#39;decision-matrix&#39;)" title="重置">
+                                <i class="fas fa-undo"></i>
+                            </button>
+                        </div>
+                        <div class="mermaid" id="decision-matrix">
+                            quadrantChart
+                                title 院校选择决策矩阵
+                                x-axis 低录取概率 --&gt; 高录取概率
+                                y-axis 低综合实力 --&gt; 高综合实力
+                                
+                                quadrant-1 理想院校
+                                quadrant-2 冲刺院校
+                                quadrant-3 保底院校
+                                quadrant-4 稳健选择
+                                
+                                荆楚理工学院: [0.7, 0.6]
+                                湖北理工学院: [0.6, 0.65]
+                                武昌首义学院: [0.8, 0.7]
+                                广东理工学院: [0.85, 0.5]
+                                武汉工程大学邮电与信息工程学院: [0.9, 0.55]
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h4 class="font-semibold text-gray-900 mb-3">关键提醒</h4>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <h5 class="font-semibold text-red-600 mb-2">风险控制</h5>
+                                <ul class="space-y-1 text-gray-700">
+                                    <li>• 确保有足够的保底院校</li>
+                                    <li>• 避免全部填报热门院校</li>
+                                    <li>• 考虑专业调剂的可能性</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-green-600 mb-2">机会把握</h5>
+                                <ul class="space-y-1 text-gray-700">
+                                    <li>• 合理设置冲刺目标</li>
+                                    <li>• 关注院校新增专业</li>
+                                    <li>• 考虑地方专项等特殊计划</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="px-8 py-12 bg-gray-900 text-white">
+            <div class="max-w-6xl mx-auto text-center">
+                <h3 class="serif text-2xl font-bold mb-4">祝愿每位考生都能进入理想的大学</h3>
+                <p class="text-gray-400 mb-6">
+                    本指南仅供参考，实际录取情况请以官方发布信息为准
+                </p>
+                <div class="text-sm text-gray-500">
+                    数据来源：湖北省教育考试院、各高校招生网站及相关教育平台
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                // Primary colors with high contrast
+                primaryColor: '#ffffff',
+                primaryTextColor: '#1f2937',
+                primaryBorderColor: '#1e3a8a',
+                
+                // Secondary colors
+                secondaryColor: '#f8fafc',
+                secondaryTextColor: '#374151',
+                secondaryBorderColor: '#64748b',
+                
+                // Tertiary colors
+                tertiaryColor: '#f1f5f9',
+                tertiaryTextColor: '#4b5563',
+                tertiaryBorderColor: '#9ca3af',
+                
+                // Background and lines
+                background: '#ffffff',
+                lineColor: '#6b7280',
+                textColor: '#1f2937',
+                
+                // Node backgrounds for better contrast
+                mainBkg: '#ffffff',
+                secondBkg: '#f8fafc',
+                tertiaryBkg: '#f1f5f9',
+                
+                // Additional colors for variety
+                primaryBorderColor: '#1e3a8a',
+                primaryTextColor: '#1f2937',
+                
+                // Quadrant chart specific
+                q1: '#dc2626',  // Red - High urgency, high importance
+                q2: '#f59e0b',  // Amber - High urgency, low importance  
+                q3: '#10b981',  // Green - Low urgency, high importance
+                q4: '#3b82f6',  // Blue - Low urgency, low importance
+                
+                // Grid and axis
+                gridColor: '#e5e7eb',
+                section0: '#f9fafb',
+                section1: '#f3f4f6',
+                section2: '#e5e7eb',
+                section3: '#d1d5db'
+            },
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true,
+                curve: 'basis',
+                padding: 20
+            },
+            quadrantChart: {
+                useMaxWidth: false,
+                chartWidth: 600,
+                chartHeight: 400,
+                titlePadding: 10,
+                titleFontSize: 16,
+                quadrantPadding: 5,
+                quadrantTextTopPadding: 5,
+                quadrantLabelFontSize: 12,
+                quadrantInternalBorderStrokeWidth: 2,
+                quadrantExternalBorderStrokeWidth: 2,
+                xAxisLabelPadding: 5,
+                xAxisLabelFontSize: 12,
+                yAxisLabelPadding: 5,
+                yAxisLabelFontSize: 12,
+                pointTextPadding: 5,
+                pointLabelFontSize: 11,
+                pointRadius: 6
+            },
+            fontFamily: 'Inter, sans-serif'
+        });
+
+        // Mermaid zoom and drag functionality
+        let currentScale = 1;
+        let isDragging = false;
+        let startX, startY, translateX = 0, translateY = 0;
+
+        function zoomMermaid(factor, containerId = 'application-flowchart') {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            
+            currentScale *= factor;
+            currentScale = Math.max(0.5, Math.min(3, currentScale)); // Limit zoom range
+            updateTransform(container);
+            updateZoomLevel(containerId);
+        }
+
+        function resetMermaid(containerId = 'application-flowchart') {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            
+            currentScale = 1;
+            translateX = 0;
+            translateY = 0;
+            updateTransform(container);
+            updateZoomLevel(containerId);
+        }
+
+        function updateTransform(container) {
+            const mermaidElement = container.querySelector('.mermaid') || container;
+            mermaidElement.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentScale})`;
+        }
+
+        function updateZoomLevel(containerId) {
+            const zoomLevelId = containerId === 'application-flowchart' ? 'zoom-level' : 'zoom-level-matrix';
+            const zoomLevel = document.getElementById(zoomLevelId);
+            if (zoomLevel) {
+                zoomLevel.textContent = Math.round(currentScale * 100) + '%';
+            }
+        }
+
+        // Add drag functionality to mermaid containers
+        document.addEventListener('DOMContentLoaded', function() {
+            const mermaidContainers = document.querySelectorAll('.mermaid');
+            
+            mermaidContainers.forEach(container => {
+                // Initialize at 100% scale
+                currentScale = 1;
+                translateX = 0;
+                translateY = 0;
+                
+                container.addEventListener('mousedown', function(e) {
+                    if (e.target.closest('.mermaid-controls')) return;
+                    isDragging = true;
+                    startX = e.clientX - translateX;
+                    startY = e.clientY - translateY;
+                    container.style.cursor = 'grabbing';
+                    e.preventDefault();
+                });
+
+                container.addEventListener('mousemove', function(e) {
+                    if (!isDragging) return;
+                    translateX = e.clientX - startX;
+                    translateY = e.clientY - startY;
+                    updateTransform(container);
+                });
+
+                container.addEventListener('mouseup', function() {
+                    isDragging = false;
+                    container.style.cursor = 'grab';
+                });
+
+                container.addEventListener('mouseleave', function() {
+                    isDragging = false;
+                    container.style.cursor = 'grab';
+                });
+
+                // Wheel zoom with better control
+                container.addEventListener('wheel', function(e) {
+                    e.preventDefault();
+                    const rect = container.getBoundingClientRect();
+                    const centerX = rect.left + rect.width / 2;
+                    const centerY = rect.top + rect.height / 2;
+                    
+                    const factor = e.deltaY > 0 ? 0.9 : 1.1;
+                    const oldScale = currentScale;
+                    
+                    zoomMermaid(factor, container.id);
+                    
+                    // Adjust translation to zoom towards center
+                    const scaleChange = currentScale / oldScale;
+                    translateX = centerX - (centerX - translateX) * scaleChange;
+                    translateY = centerY - (centerY - translateY) * scaleChange;
+                    
+                    updateTransform(container);
+                });
+
+                // Touch support for mobile
+                let touchStartX, touchStartY, touchStartTranslateX, touchStartTranslateY;
+                
+                container.addEventListener('touchstart', function(e) {
+                    if (e.touches.length === 1) {
+                        const touch = e.touches[0];
+                        touchStartX = touch.clientX;
+                        touchStartY = touch.clientY;
+                        touchStartTranslateX = translateX;
+                        touchStartTranslateY = translateY;
+                        e.preventDefault();
+                    }
+                });
+
+                container.addEventListener('touchmove', function(e) {
+                    if (e.touches.length === 1) {
+                        const touch = e.touches[0];
+                        translateX = touchStartTranslateX + (touch.clientX - touchStartX);
+                        translateY = touchStartTranslateY + (touch.clientY - touchStartY);
+                        updateTransform(container);
+                        e.preventDefault();
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile TOC toggle
+        function toggleTOC() {
+            const toc = document.querySelector('.toc-fixed');
+            toc.classList.toggle('open');
+        }
+
+        // Add mobile menu button if needed
+        if (window.innerWidth <= 1024) {
+            const mobileMenuBtn = document.createElement('button');
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.className = 'fixed top-4 left-4 z-50 bg-blue-600 text-white p-3 rounded-lg shadow-lg lg:hidden';
+            mobileMenuBtn.onclick = toggleTOC;
+            document.body.appendChild(mobileMenuBtn);
+        }
+    </script>
+
+</body></html>
